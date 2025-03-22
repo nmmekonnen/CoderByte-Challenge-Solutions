@@ -82,3 +82,44 @@ function ExOh(str) {
          
       // keep this function call here 
       console.log(SimpleMode(readline()));
+
+
+//calculates the sum of all the numbers at the even indexes of array and then multiplies that sum by last number in the array 
+
+function evenLast(numbers) {
+  let count = 0; 
+  
+  let last = numbers[numbers.length-1]
+  
+  let newArr = []; 
+  
+  
+ if(numbers.length < 1){
+   
+   return 0
+ } else {
+   
+   for(let i=0; i<numbers.length; i++){
+    if(i % 2 === 0){
+      
+      newArr.push(numbers[i])
+    }
+  }
+  
+  for(let i=0; i<newArr.length; i++){
+  
+    count+= newArr[i]
+  }
+  
+  
+  return count * last
+  
+   
+   
+   
+ }
+  
+  
+  
+  
+}
